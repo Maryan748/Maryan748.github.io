@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Світ Програмування</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(135deg, #1e3c72, #2a5298);
+            color: white;
+        }
+        header {
+            text-align: center;
+            padding: 50px 20px;
+        }
+        header h1 {
+            font-size: 3em;
+            animation: fadeIn 2s ease;
+        }
+        nav {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            margin-bottom: 30px;
+        }
+        nav a {
+            text-decoration: none;
+            color: white;
+            font-size: 1.2em;
+            transition: color 0.3s;
+        }
+        nav a:hover {
+            color: #00c3ff;
+        }
+        section {
+            padding: 20px;
+            max-width: 800px;
+            margin: auto;
+            animation: slideIn 1s ease-out;
+        }
+        .highlight {
+            background-color: #2e8ccf;
+            padding: 5px 10px;
+            border-radius: 5px;
+        }
+        .animate:hover {
+            animation: bounce 0.5s infinite alternate;
+        }
+        footer {
+            text-align: center;
+            padding: 20px;
+            background: rgba(0, 0, 0, 0.5);
+        }
+
+        /* Анімації */
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        @keyframes slideIn {
+            from { transform: translateY(100px); opacity: 0; }
+            to { transform: translateY(0); opacity: 1; }
+        }
+        @keyframes bounce {
+            from { transform: translateY(0); }
+            to { transform: translateY(-10px); }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Світ Програмування</h1>
+        <nav>
+            <a href="#about">Про нас</a>
+            <a href="#languages">Мови</a>
+            <a href="#contact">Контакти</a>
+        </nav>
+    </header>
+
+    <section id="about">
+        <h2>Про програмування</h2>
+        <p>Програмування — це <span class="highlight">мистецтво</span> створення коду, яке змінює світ. Це спосіб вирішувати проблеми, автоматизувати процеси та творити нові інструменти.</p>
+    </section>
+
+    <section id="languages">
+        <h2>Популярні мови програмування</h2>
+        <ul>
+            <li class="animate">JavaScript</li>
+            <li class="animate">Python</li>
+            <li class="animate">Java</li>
+            <li class="animate">C++</li>
+            <li class="animate">Ruby</li>
+        </ul>
+    </section>
+
+    <section id="contact">
+        <h2>Контакти</h2>
+        <p>Маєте запитання? Напишіть нам: <a href="mailto:info@progworld.com">info@progworld.com</a></p>
+        <button id="contactBtn">Клікніть для сюрпризу</button>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Світ Програмування. Усі права захищено.</p>
+    </footer>
+
+    <script>
+        // Анімація при натисканні кнопки
+        document.getElementById("contactBtn").addEventListener("click", function() {
+            alert("Ви крутезний програміст!");
+        });
+    </script>
+</body>
+</html>
